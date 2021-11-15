@@ -5,6 +5,7 @@
   padding: 0px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
 body {
@@ -176,6 +177,7 @@ main {
   position: absolute;
   top: 20%;
   right: 20%;
+  padding: 5%;
 }
 
 [hidden] {
@@ -203,14 +205,29 @@ main {
   color: #d10b53;
 }
 
+.alert-text {
+  width: 100%;
+  text-align: center;
+}
 
 .alert-icon img {
-  width: 100px;
-  margin-right: .5rem;
+  width: 5rem;
+  margin-top: .7rem;
 }
 
 .alert-text  h1 {
   color: #ffbb00;
+  font-size: 1.5rem;
+}
+
+.font-style-black{
+  color: black;
+  font-size: 1.2rem;
+  margin-top: 10%;
+}
+
+strong{
+  color: black;
 }
 
 /*Responsividade*/

@@ -27,7 +27,7 @@ function makeInput() {
     inputMl.classList.add('input');
     inputMl.setAttribute('type', 'number');
     inputMl.setAttribute('id', 'input-ml');
-    inputMl.setAttribute('placeholder', '437');
+    inputMl.setAttribute('placeholder', '437ml');
 
     inputValue.classList.add('input');
     inputValue.setAttribute('type', 'number');
@@ -38,8 +38,14 @@ function makeInput() {
     containerInputValue.appendChild(inputValue);
 }
 
-function isValid(e) {
-    return true
+function makeResult(result){
+    const alert_text = document.querySelector(".alert-text");
+    const p = document.createElement('p');
+    p.setAttribute('id', 'alert-text-result');
+    p.classList.add('font-style-black');
+    p.innerHTML = `
+        A sua melhor opção é <strong>${result.ml}ml</strong>, no valor de <strong>${(result.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))}</strong>`;
+    alert_text.appendChild(p);
 }
 
 function showResult(result) {
@@ -54,6 +60,7 @@ function showResult(result) {
         window.location.reload();
     });
 
+    makeResult(result);
 
 }
 
@@ -64,11 +71,7 @@ addEl.addEventListener('click', addInput);
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    if (!isValid(e)) {
-        alert('Verifique os campos abaixo!')
-    }
-
+    
     let inputMl = [];
     let inputValue = [];
     let inputs = [];
