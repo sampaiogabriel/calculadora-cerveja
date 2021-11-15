@@ -173,3 +173,29 @@ main {
 .alert-text{
     color: white;
 }
+
+/*Responsividade*/
+
+@media (max-width: 320px) {
+
+}
+
+@media (max-width: 375px) {
+  main{
+    width: 100vw;
+  }
+
+  .input{
+    width: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 768px) {
+  main{
+    width: 90vw;
+  }
+}
