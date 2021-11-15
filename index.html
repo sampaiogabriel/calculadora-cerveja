@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./src/styles/style.css">
+
+    <!-- Fav Icon -->
     <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3262079615.js" crossorigin="anonymous"></script>
+
     <title>Calculadora Cerveja</title>
 </head>
 
@@ -50,17 +58,23 @@
             </div>
         </form>
 
-        <section class="container-result">
-            <div class="alert">
-                <div class="alert-icon">
-                    <img src="./src/images/warning.png" alt="Warning Icon">
-                </div>
-                <div class="alert-text">
-                    A cerveja de "1000ml" no valor de R$ "10" é sua melhor opção!
-                </div>
+        <div class="modal-result" hidden>
+            <button id="close-modal"><i class="fas fa-times"></i></button>
+            <div class="alert-icon">
+                <img src="./src/images/warning.png" alt="Warning Icon">
             </div>
-        </section>
+            <div class="alert-text">
+                <h1>Melhor Opção</h1>
+            </div>
+        </div>
+
     </main>
+
+
+
+
+
+
 
     <script src="src/scripts/script.js"></script>
 

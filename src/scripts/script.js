@@ -10,9 +10,9 @@ function addInput() {
 }
 
 function minusInput() {
-    if(containerMlEl.children.length <= 4 && containerValueEl.children.length <= 4){
+    if (containerMlEl.children.length <= 4 && containerValueEl.children.length <= 4) {
         alert('Não foi possível excluir o input')
-    }else{
+    } else {
         containerMlEl.lastChild.remove();
         containerValueEl.lastChild.remove();
     }
@@ -42,13 +42,21 @@ function isValid(e) {
     return true
 }
 
-function showAlert(calc){
-    // Modal
+function showResult(result) {
+    const modalResult = document.querySelector(".modal-result");
+    const closeModalBtn = document.querySelector("#close-modal");
+
+    modalResult.toggleAttribute("hidden");
+    closeModalBtn.addEventListener("click", _ => {
+        if (!modalResult.hasAttribute("hidden")) {
+            modalResult.toggleAttribute("hidden");
+        }
+        window.location.reload();
+    });
+
+
 }
 
-function cleanInputs(){
-    console.log(containerMlEl.children);
-}
 
 minusEl.addEventListener('click', minusInput);
 
@@ -85,15 +93,13 @@ formEl.addEventListener('submit', (e) => {
         inputs.push(input);
     }
 
-    console.log(inputs);
-
     let result = inputs.reduce((accumulator, calc) => {
-        if(calc.div >= accumulator){
+        if (calc.div >= accumulator) {
             accumulator = calc;
         }
         return accumulator
     }, 0);
 
-    showAlert(result);
-    cleanInputs();
+    showResult(result);
+
 })
