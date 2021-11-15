@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon">
     <title>Calculadora Cerveja</title>
 </head>
 
@@ -16,48 +17,36 @@
             <div class="logo">
                 <img src="./src/images/logo.png" alt="Logo Calculadora Cerveja">
             </div>
-            <div class="title">
+            <div class="title text-stroke">
                 Calcular Cerveja
             </div>
         </header>
 
-        <form class="container-input">
+        <form class="container-input" id="form-calculator-beer">
             <div class="container-input-form">
-                <div class="container-input-form-ml">
-                    <h2>
+                <div class="container-input-form-ml" id="container-input-form-ml">
+                    <h2 class="letter-space">
                         Mililitros
                     </h2>
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
-                    <input type="number" class="input" placeholder="437">
+                    <input type="number" class="input" id="input-ml" placeholder="437ml">
+                    <input type="number" class="input" id="input-ml" placeholder="437ml">
+                    <input type="number" class="input" id="input-ml" placeholder="437ml">
                 </div>
-                <div class="container-input-form-value">
-                    <h2>
+                <div class="container-input-form-value" id="container-input-form-value">
+                    <h2 class="letter-space ">
                         Valor
                     </h2>
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
-                    <input type="number" class="input" placeholder="R$ 5.48">
+                    <input type="number" class="input" id="input-value" step=".01" placeholder="R$ 5.48">
+                    <input type="number" class="input" id="input-value" step=".01" placeholder="R$ 5.48">
+                    <input type="number" class="input" id="input-value" step=".01" placeholder="R$ 5.48">
                 </div>
             </div>
             <div class="container-input-add-inputs">
-                <img src="./src/images/minus-button.png" alt="Remover Input Logo">
-                <img src="./src/images/add.png" alt="Adicionar Input Logo">
+                <img src="./src/images/minus-button.png" id="minus-btn" alt="Remover Input Logo">
+                <img src="./src/images/add.png" id="add-btn" alt="Adicionar Input Logo">
             </div>
             <div class="container-input-button">
-                <input type="button" class="button" value="Calcular">
+                <button type="submit" class="button">Calcular</button>
             </div>
         </form>
 
@@ -67,11 +56,13 @@
                     <img src="./src/images/warning.png" alt="Warning Icon">
                 </div>
                 <div class="alert-text">
-                    A cerveja de "437ml" é sua melhor opção!
+                    A cerveja de "1000ml" no valor de R$ "10" é sua melhor opção!
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="src/scripts/script.js"></script>
 
 </body>
 
